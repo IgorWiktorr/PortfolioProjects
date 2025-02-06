@@ -7,6 +7,7 @@ ORDER BY 3,4
 --ORDER BY 3,4
 
 --Select Data we are going to be using
+    
 Select Location, date, total_cases, new_cases, total_deaths, population
 From `arsenal-448013.covid_project.covid_deaths`
 Where continent is not null 
@@ -130,6 +131,7 @@ JOIN `arsenal-448013.covid_project.covid_vaccinations` AS vac
 WHERE dea.continent IS NOT NULL;
 
 -- Select from the temp table
+
 SELECT *, 
        (RollingPeopleVaccinated / Population) * 100 AS PercentageVaccinated
 FROM PercentPopulationVaccinated
